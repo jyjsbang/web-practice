@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>할 일 목록</title>
+    <style>
+        li {
+            margin-bottom: 8px;
+        }
+
+        li.completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        button.delete-btn {
+            margin-left: 10px;
+            color: white;
+            background-color: red;
+            border: none;
+            padding: 3px 7px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input.edit {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>할 일 앱 (저장 & 수정 포함)</h2>
+    <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+    <button onclick="addTodo()">추가</button>
+    <div id="filter-buttons">
+        <button data-filter="all">전체</button>
+        <button data-filter="completed">완료</button>
+        <button data-filter="active">미완료</button>
+    </div>
+    <ul id="todoList"></ul>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
