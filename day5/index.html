@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>할 일 목록</title>
+    <style>
+        li {
+            margin-bottom: 8px;
+        }
+
+        li.completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        button.delete-btn {
+            margin-left: 10px;
+            color: white;
+            background-color: red;
+            border: none;
+            padding: 3px 7px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input.edit {
+            margin-left: 5px;
+        }
+
+        body.dark {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        body.dark input,
+        body.dark button {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #555;
+        }
+
+        body.dark li {
+            border-bottom: 1px solid #444;
+        }
+
+        #darkModeToggle {
+            padding: 6px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            background-color: #eee;
+            border-radius: 4px;
+        }
+
+        body.dark #darkModeToggle {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>나의 할 일 목록</h2>
+        <button id="darkModeToggle">🌙 다크모드</button>
+    </div>
+    <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+    <button onclick="addTodo()">추가</button>
+    <div id="filter-buttons">
+        <button data-filter="all">전체</button>
+        <button data-filter="completed">완료</button>
+        <button data-filter="active">미완료</button>
+    </div>
+    <ul id="todoList"></ul>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
